@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/t_window_bg"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/toolbar" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="skinSelect"
+        android:text="个性换肤"
+        tools:ignore="MissingPrefix" />
+
+    <com.zhy.skindemo.MyTabLayout
+        android:id="@+id/tabView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+
+        android:background="@color/tab_color"
+        app:tabIndicatorColor="@color/tabSelectedTextColor"
+        app:tabTextColor="@color/tab_selector"
+        app:tabIndicatorHeight="5dp"
+        />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
